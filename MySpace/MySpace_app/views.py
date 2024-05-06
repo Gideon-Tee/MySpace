@@ -5,4 +5,4 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse('<h1>Welcome to MySpace </h1>')
+    return render(request, 'my_space/index.html')
