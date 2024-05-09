@@ -24,7 +24,7 @@
                     <div class="left-side">
                         <!-- Logo -->
                         <div id="logo" class=" uk-hidden@s">
-                            <a href="home.html">
+                            <a href="{% url 'index' %}">
                                 <b><h1 style="text-transform: uppercase;">Social Book</h1></b>
                             </a>
                         </div>
@@ -171,10 +171,10 @@
                         </a>
                         <div uk-drop="mode: click;offset:9" class="header_dropdown profile_dropdown border-t">
                             <ul>
-                                <li><a href="setting.html"> Account setting </a> </li>
-                                <li><a href="explore.html">explore </a> </li>
-                                <li><a href="#"> Help </a> </li>
-                                <li><a href="signin.html"> Log Out</a></li>
+                                <li class="mb-2"><h4>{{user.username}}</h4></li><hr>
+                                <li><a href="{% url 'settings' %}"> Account setting </a> </li>
+                                <li><a href="{% url 'logout' %}"> Log Out</a></li>
+                                
                             </ul>
                         </div>
 
